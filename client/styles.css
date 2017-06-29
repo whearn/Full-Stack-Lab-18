@@ -1,0 +1,34 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: lightblue;
+    text-align: center;
+}
+
+#chirp-box {
+    text-align: center;
+}
+
+.chirp {
+    background-color: white;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    border: darkblue solid 2px;
+    border-radius: 20px;
+}
+
+.chirp button {
+    margin-bottom: 1.5em;
+    margin: 0 0.5em 1.5em;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: darkblue;
+}

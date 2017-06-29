@@ -1,0 +1,11 @@
+<h1><a href="/chirps">Chirper</a></h1>
+<div class="chirp-update">
+    <input type="text" placeholder="Update your Chirp!" ng-model="newMessage">
+    <button ng-click="updateChirp()">Update Chirp</button>
+</div>
+<div class="chirp">
+    <h1>{{ chirp.message }}</h1>
+    <h3>{{ chirp.user }}</h3>
+    <h4>{{ chirp.timestamp }}</h4>
+    <button ng-click="deleteChirp()">Delete</button>
+</div>
