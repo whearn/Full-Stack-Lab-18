@@ -13,15 +13,16 @@ angular.module('myApp.controllers', [])
 
     $scope.createChirp = function() {
         var p = new Chirp({
+            // userId: $scope.newId,
             name: $scope.newName,
-            price: $scope.newPrice
+            message: $scope.newMessage
         });
 
         p.$save(function(success) {
             alert('Chirp saved successfully!');
             $scope.chirps = Chirp.query();
             $scope.newName = '';
-            $scope.newPrice = '';
+            $scope.newMessage = '';
         }, function(err) {
             console.log(err);
         });
@@ -44,4 +45,11 @@ angular.module('myApp.controllers', [])
             });
         }
     }
+}])
+.controller('UpdateController', ['$scope', 'Chirp', '$routeParams', function($scope, Chirp, $routeParams) {
+    $scope.chirp = Chirp.get({ id: $routeParams.id });
+
+    $scope.updateChirp = function() {
+
+    };
 }]);
