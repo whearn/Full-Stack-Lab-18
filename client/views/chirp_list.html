@@ -1,10 +1,10 @@
 <div class="chirp-maker">
-    <select id="user-selector">
+    <select id="user-selector" ng-model="newUserId">
         <option value="">Select a User</option>
-        <option value="" ng-repeat="user in users" ng-model="newName" ng-value="user.id">{{ user.name }}</option>
+        <option value="{{ user.id }}" ng-repeat="user in users">{{ user.name }}</option>
     </select>
-    <input type="text" placeholder="Insert Your Chirp Here!" ng-model="newMessage">
-    <button ng-click="createChirp()">Create Chirp</button>
+    <input type="text" placeholder="Write Your Chirp Here!" ng-model="newMessage">
+    <button id="chirp-btn" ng-click="createChirp()">Create Chirp</button>
 </div>
 <div class="chirp-list">
     <div class="chirp" ng-repeat="chirp in chirps">
